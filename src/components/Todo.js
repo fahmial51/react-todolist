@@ -85,7 +85,7 @@ class Todo extends Component {
                     <br />
                     <ol id="job-list" className="list-group">
                         {this.state.database.map((data, i) => {
-                            return <li className="list-group-item" id={i} key={i}><div className={"float-left "+ (data.status === true ? 'is-done':'')}><input className="checkbox" onChange={this.changeStatus(i)} type="checkbox" checked={data.status} title="Tandai sudah selesai" /> {data.name} </div><button className="btn btn-danger float-right delete-list" onClick={this.deleteList(i)} title="Hapus tugas">x</button></li> 
+                            return <li className="list-group-item" id={i} key={i}><div className={"float-left "+ (data.status === true ? 'is-done':'')} onClick={this.changeStatus(i)}><input className="checkbox" type="checkbox" checked={data.status} title="Tandai sudah selesai" /> {data.name} </div><button className="btn btn-danger float-right delete-list" onClick={this.deleteList(i)} title="Hapus tugas">x</button></li> 
                         })}
                     </ol>
                 </div>
